@@ -1,0 +1,97 @@
+body {
+    font-family: 'Copperplate', Fantasy;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #fff;
+}
+
+header {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.769);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.animated-text {
+    font-size: 2em;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.food-section,
+.drink-section {
+    background-color: #ed7308;
+    padding: 50px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0c0b0b;
+}
+
+.food-gallery,
+.drink-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.food-gallery img,
+.drink-gallery img {
+    max-width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.769);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.food-gallery img:hover,
+.drink-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .food-section,
+    .drink-section {
+        padding: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .food-section,
+    .drink-section {
+        padding: 30px;
+    }
+
+    .food-gallery,
+    .drink-gallery {
+        flex-direction: column;
+    }
+}
